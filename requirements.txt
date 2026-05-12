@@ -4,7 +4,7 @@ numpy>=1.26,<3
 scikit-learn>=1.4,<2
 nltk>=3.9,<4
 plotly>=5.22,<7
-transformers==4.49.0
+transformers==4.44.2
 torch>=2.2,<3
 openai>=1.40,<2
 python-dotenv>=1.0,<2

@@ -13,8 +13,6 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.cluster import KMeans, AgglomerativeClustering, DBSCAN
 from sklearn.metrics import silhouette_score, davies_bouldin_score, calinski_harabasz_score
 
-from transformers import pipeline
-
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
@@ -186,6 +184,11 @@ stop_words, lemmatizer = setup_nltk()
 
 @st.cache_resource
 def load_deep_sentiment_model():
+    # Imported lazily (not at module top level) so Transformers/torch are only
+    # loaded when the user actually enables Deep NLP Sentiment Analysis — this
+    # avoids pulling the heavy import chain at Streamlit Cloud startup.
+    from transformers import pipeline
+
     return pipeline(
         task="sentiment-analysis",
         model="cardiffnlp/twitter-roberta-base-sentiment-latest",
