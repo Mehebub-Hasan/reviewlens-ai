@@ -1,17 +1,10 @@
-# Python dependencies for ReviewLens AI.
-# Install locally:  pip install -r requirements.txt
-# Streamlit Community Cloud installs from this file automatically.
-# Version floors keep things reproducible without freezing pip's resolver.
-# (NLTK corpora aren't pip-installable — app.py downloads them at runtime.)
-
-streamlit>=1.57
-pandas>=2.2
-numpy>=1.26
-scikit-learn>=1.4
-nltk>=3.9
-plotly>=5.22
-transformers>=4.40
-torch>=2.2
-torchvision>=0.17
-openai>=1.40
-python-dotenv>=1.0
+streamlit>=1.40,<2
+pandas>=2.2,<3
+numpy>=1.26,<3
+scikit-learn>=1.4,<2
+nltk>=3.9,<4
+plotly>=5.22,<7
+transformers==4.49.0
+torch>=2.2,<3
+openai>=1.40,<2
+python-dotenv>=1.0,<2
