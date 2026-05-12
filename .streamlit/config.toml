@@ -1,0 +1,17 @@
+# Streamlit configuration for ReviewLens AI.
+# Locks the app to a dark theme so the custom CSS in app.py renders consistently
+# on every machine and on Streamlit Community Cloud.
+# NOTE: secrets (e.g. DEEPSEEK_API_KEY) belong in .streamlit/secrets.toml on
+# Streamlit Cloud (or in a local .env) — never in this file, which is committed.
+
+[theme]
+base = "dark"
+primaryColor = "#00DBDE"
+backgroundColor = "#0E1119"
+secondaryBackgroundColor = "#171B22"
+textColor = "#E8EEF7"
+font = "sans serif"
+
+[server]
+# Don't try to open a browser tab automatically when running locally / on a server.
+headless = true
