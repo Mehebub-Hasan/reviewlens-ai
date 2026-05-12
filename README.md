@@ -1,3 +1,12 @@
+---
+title: ReviewLens AI
+emoji: 🔍
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 7860
+pinned: false
+---
 # ReviewLens AI
 
 A deployable Streamlit app for analysing customer-review / feedback datasets end to end. Upload any CSV, pick the text column (and optionally a rating column), and ReviewLens AI runs a full NLP/ML pipeline and presents the results in a dashboard.
